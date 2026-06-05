@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #070b16;
+  color: white;
+}
+
+.page {
+  max-width: 1150px;
+  margin: auto;
+  padding: 25px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav span {
+  color: #7c4dff;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: bold;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 0;
+  gap: 40px;
+}
+
+.intro {
+  color: #9b5cff;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.hero h2 {
+  color: #9b5cff;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #cfd6e6;
+}
+
+.buttons {
+  margin-top: 25px;
+}
+
+.primary,
+.secondary {
+  padding: 14px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.primary {
+  background: linear-gradient(90deg, #7c4dff, #2f80ed);
+  color: white;
+}
+
+.secondary {
+  border: 1px solid #7c4dff;
+  color: white;
+}
+
+.photoBox {
+  background: linear-gradient(135deg, #7c4dff, #2f80ed);
+  border-radius: 50%;
+  padding: 8px;
+  min-width: 330px;
+  height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoBox img {
+  width: 315px;
+  height: 315px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 35px;
+  border-radius: 18px;
+  margin-bottom: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section h2 {
+  font-size: 30px;
+}
+
+.section p {
+  color: #cfd6e6;
+  line-height: 1.7;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills span {
+  background: rgba(124, 77, 255, 0.18);
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: 1px solid rgba(124, 77, 255, 0.4);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: #111827;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card h3 {
+  color: white;
+}
+
+.card p {
+  color: #cfd6e6;
+}
+
+.contact {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav a {
+    margin-left: 10px;
+  }
+}
