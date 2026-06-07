@@ -1,78 +1,88 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #070b16;
+  background:
+    radial-gradient(circle at top left, rgba(124, 77, 255, 0.35), transparent 30%),
+    radial-gradient(circle at top right, rgba(47, 128, 237, 0.25), transparent 30%),
+    #070b16;
   color: white;
 }
 
 .page {
-  max-width: 1150px;
+  max-width: 1120px;
   margin: auto;
-  padding: 25px;
+  padding: 26px;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 70px;
+}
+
+.nav h2 {
+  margin: 0;
 }
 
 .nav span {
-  color: #7c4dff;
+  color: #9b5cff;
 }
 
 .nav a {
   color: white;
   text-decoration: none;
-  margin-left: 25px;
+  margin-left: 24px;
   font-weight: bold;
 }
 
+.nav a:hover {
+  color: #9b5cff;
+}
+
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 80px 0;
-  gap: 40px;
+  text-align: center;
+  padding: 60px 20px 80px;
 }
 
 .intro {
   color: #9b5cff;
+  font-size: 24px;
   font-weight: bold;
-  font-size: 22px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .hero h1 {
-  font-size: 64px;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  line-height: 1.1;
+  font-size: 70px;
+  margin: 0 0 24px;
+  line-height: 1.05;
 }
 
 .hero h2 {
   color: #9b5cff;
-  font-size: 30px;
-  margin-top: 0;
-  margin-bottom: 30px;
+  font-size: 32px;
+  margin: 0 0 28px;
 }
 
-.hero p {
-  font-size: 18px;
+.heroText {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #d6def2;
+  font-size: 20px;
   line-height: 1.7;
-  color: #cfd6e6;
 }
 
 .buttons {
-  margin-top: 25px;
+  margin-top: 36px;
 }
 
 .primary,
 .secondary {
-  padding: 14px 22px;
-  border-radius: 10px;
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 12px;
   text-decoration: none;
-  margin-right: 15px;
+  margin: 8px;
   font-weight: bold;
 }
 
@@ -86,39 +96,51 @@ body {
   color: white;
 }
 
-.photoBox {
-  background: linear-gradient(135deg, #7c4dff, #2f80ed);
-  border-radius: 50%;
-  padding: 8px;
-  min-width: 330px;
-  height: 330px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.primary:hover,
+.secondary:hover {
+  transform: translateY(-2px);
 }
 
-.photoBox img {
-  width: 315px;
-  height: 315px;
-  object-fit: cover;
-  border-radius: 50%;
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.stats div,
+.section {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.stats h3 {
+  color: #9b5cff;
+  font-size: 34px;
+  margin: 0;
+}
+
+.stats p {
+  color: #cfd6e6;
+  margin-bottom: 0;
 }
 
 .section {
-  background: rgba(255, 255, 255, 0.06);
-  padding: 35px;
-  border-radius: 18px;
-  margin-bottom: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 26px;
 }
 
 .section h2 {
-  font-size: 30px;
+  font-size: 32px;
+  margin-top: 0;
 }
 
 .section p {
   color: #cfd6e6;
   line-height: 1.7;
+  font-size: 17px;
 }
 
 .skills {
@@ -131,7 +153,7 @@ body {
   background: rgba(124, 77, 255, 0.18);
   padding: 12px 18px;
   border-radius: 30px;
-  border: 1px solid rgba(124, 77, 255, 0.4);
+  border: 1px solid rgba(124, 77, 255, 0.45);
 }
 
 .cards {
@@ -142,43 +164,52 @@ body {
 
 .card {
   background: #111827;
-  padding: 25px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 26px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.card h3 {
-  color: white;
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #9b5cff;
 }
 
-.card p {
-  color: #cfd6e6;
+.tag {
+  color: #9b5cff !important;
+  font-weight: bold;
+  margin-top: 0;
 }
 
-.contact {
-  margin-bottom: 50px;
+.contact a {
+  color: #9b5cff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 800px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 44px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
   .nav {
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
   }
 
   .nav a {
-    margin-left: 10px;
+    margin: 8px;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .stats,
+  .cards {
+    grid-template-columns: 1fr;
   }
 }
